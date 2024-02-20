@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - form</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <title>"Страница обратной связи "Я - студент ВШЭ"</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="keywords" content="html, homework, hse, student">
+ <meta name="description" content="Main page">
+ <meta name="author" content="Viktoriya Gontarenko">
+ <meta property="og:image" content="URL">
+ <meta property="og:title" content="Заголовок для Facebook">
+ <meta name="twitter:title" content="Заголовок для Twitter">
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <link rel="shortcut icon" href="https://api.time.com/wp-content/uploads/2019/03/kitten-report.jpg?w=784&quality=85" type="image/jpeg">
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="../icons/favicon.ico" type="image/x-icon">
+ 
+ <link rel="apple-touch-icon-precomposed" sizes="144x144" href="image.png">
+
+</head>
+<body>
+ <header>
+   <h1>
+    Страница обратной связи
+   </h1>
+ </header>
+  
+ <nav>
+   <ul>
+     <li>
+       <a href="index.html">Жизнь студента ВШЭ</a>
+       <ul>
+         <li><a href="index.html">Учебные будни</a></li>
+         <li><a href="index.html">Студенческие активности</a></li>
+         <li><a href="index.html">Полезная информация</a></li>
+       </ul>
+     </li>
+     <li><a href="#section1">Страница обратной связи</a></li>
+   </ul>
+ </nav>
+  
+ <form action="/serverscript" method="get">
+     <input type="search" name="query" placeholder="Введите запрос">
+     <input type="submit" name="query" value="Искать!">
+ </form>
+  
+ <main>
+  <section>
+       <article>
+        <h2 id="section1">
+         Форма обратной связи
+        </h2>
+        <p>
+        Ниже находится форма обратной связи с великим множеством самых разнообразных и неожиданных вопросов, enjoy!
+        </p>
+        <input type="button" value="Тестовая кнопка для проверки готовности к заполнению формы, нажмите"><br><br>
+        <ol>
+           <li>
+              <p>
+              Введите вашу почту
+              </p>
+              <input type="email"><br><br>
+           </li>
+           <li>
+              <p>
+              Введите ваш телефон
+              </p>
+              <input type="tel"><br>
+            </li>
+           <li>
+              <p>
+              С помощью ползунка покажите, насколько важной является ваша заявка
+              </p>
+              <input type="range"><br><br>
+           </li>
+           <li>
+              <p>
+              Отметьте дату, когда вы заполняете эту форму
+              </p>
+              <input type="date" name="date"><br><br>
+           </li>
+           <li>
+              <p>
+              А теперь уточните дату, отметив еще и время (погрешность в минуту допускается)
+              </p>
+              <input type="datetime-local"><br><br>
+           </li>
+           <li>
+              <p>
+              Как вы связаны с ВШЭ?
+              </p>
+              <form>
+              <fieldset id="group1">
+              <input name="group1" id="opt1"  type="radio" value="1">
+              <label for="opt1">Учусь тут</label>
+              <br>
+              <input name="group1" id="opt2"  type="radio" value="2">
+              <label for="opt2">Работаю тут</label>
+              <br>
+              <input name="group1" id="opt3" type="radio" value="3">
+              <label for="opt3">Только планирую связать свою судьбу с ВШЭ</label>
+              <br>
+              <input name="group1" id="opt4" type="radio" value="4">
+              <label for="opt4">Никак не связан с ВШЭ и не планирую</label>
+              <br>
+              </fieldset>
+              </form>
+              <br>
+           </li>
+           <li>
+              <p>
+              Какие вопросы вас интересуют?
+              </p>
+              <form>
+              <fieldset id="group2_1">
+              <input name="group2_1_1" id="opt1"  type="radio" value="1">
+              <label for="opt1">Поступление в ВШЭ</label>
+              <br>
+              <input name="group2_1_2" id="opt2"  type="radio" value="2">
+              <label for="opt2">Ситуация с общежитиями для студентов</label>
+              <br>
+              <input name="group2_1_3" id="opt3" type="radio" value="3">
+              <label for="opt3">Подробности по студенческим организациям</label>
+              <br>
+              <input name="group2_1_4" id="opt4" type="radio" value="4">
+              <label for="opt4">Наличие стипендии и возможность ее получения</label>
+              <br>
+              <input type="reset"><br>
+              </fieldset>
+              </form>
+              <br>
+           </li>
+           <li>
+              <p>
+              Распишите ваши вопросы подробно в поле ниже
+              </p>
+              <textarea></textarea><br><br>
+            </li>
+           <li>
+              <p>
+              Прикрепите сюда файл (лучше связанный с темой заявки, но можете просто прикрепить подборку с котиками)
+              </p>
+              <input type="file" name="uplResume"><br><br>
+           </li>
+           <li>
+              <p>
+              Выберете город (в списке представлены те, где есть филиал ВШЭ)
+              </p>
+              <select name="slct">
+                <optgroup label="numbers">
+                  <option>Москва</option>
+                  <option>Санкт-Петербург</option>
+                  <option>Пермь</option>
+                  <option>Нижний Новгород</option>
+                </optgroup>
+              </select> <br><br>
+            </li>
+           <li>
+              <p>
+              Заполните поля ниже, указав дату и время, когда вам удобно будет связаться
+              </p>
+              <input type="time"><br><br>
+              <input type="week"><br><br>
+              <input type="month"><br><br>
+            </li>
+         </ol>
+         
+     <input type="checkbox" name="chkAccepted">
+     <label for="chkAccepted">Вы соглашаетесь на обработку персональных данных </label>
+     <br>
+     <input type="submit"><br><br>
+   </section>
+   <p>
+   <i>Это конец формы! Спасибо за ее заполнение, с вами свяжутся в течение одного рабочего дня! Bye!
+   </i>
+   </p>
+</main>
+ <footer id="footer">
+     <p>
+       All rights reserved
+     </p>
+     <address>
+     <p>
+       Москва
+     </p>
+     </address>
+   </footer>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
