@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - form</title>
+  <title>CodePen - index</title>
   
 
 </head>
@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <title>"Страница обратной связи "Я - студент ВШЭ"</title>
+ <title>Главная страница "Я - студент ВШЭ"</title>
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="keywords" content="html, homework, hse, student">
@@ -34,7 +34,7 @@
 <body>
  <header>
    <h1>
-    Страница обратной связи
+    Я - студент ВШЭ
    </h1>
  </header>
   
@@ -43,158 +43,166 @@
      <li>
        <a href="index.html">Жизнь студента ВШЭ</a>
        <ul>
-         <li><a href="index.html">Учебные будни</a></li>
-         <li><a href="index.html">Студенческие активности</a></li>
-         <li><a href="index.html">Полезная информация</a></li>
+         <li><a href="#">Учебные будни</a></li>
+         <li><a href="#">Студенческие активности</a></li>
+         <li><a href="#">Полезная информация</a></li>
        </ul>
      </li>
-     <li><a href="#section1">Страница обратной связи</a></li>
+     <li><a href="form.html">Страница обратной связи</a></li>
    </ul>
  </nav>
   
- <form action="/serverscript" method="get">
-     <input type="search" name="query" placeholder="Введите запрос">
-     <input type="submit" name="query" value="Искать!">
- </form>
-  
  <main>
+ <form action="/serverscript" method="post">
+ <label for="query">Поиск по сайту: </label>
+ <input type="search" disabled name="query" placeholder="Введите запрос">
+ <input type="submit" name="query" value="Искать">
+ <br>
+ <br>
   <section>
        <article>
-        <h2 id="section1">
-         Форма обратной связи
-        </h2>
-        <p>
-        Ниже находится форма обратной связи с великим множеством самых разнообразных и неожиданных вопросов, enjoy!
-        </p>
-        <input type="button" value="Тестовая кнопка для проверки готовности к заполнению формы, нажмите"><br><br>
-        <ol>
-           <li>
-              <p>
-              Введите вашу почту
-              </p>
-              <input type="email"><br><br>
-           </li>
-           <li>
-              <p>
-              Введите ваш телефон
-              </p>
-              <input type="tel"><br>
-            </li>
-           <li>
-              <p>
-              С помощью ползунка покажите, насколько важной является ваша заявка
-              </p>
-              <input type="range"><br><br>
-           </li>
-           <li>
-              <p>
-              Отметьте дату, когда вы заполняете эту форму
-              </p>
-              <input type="date" name="date"><br><br>
-           </li>
-           <li>
-              <p>
-              А теперь уточните дату, отметив еще и время (погрешность в минуту допускается)
-              </p>
-              <input type="datetime-local"><br><br>
-           </li>
-           <li>
-              <p>
-              Как вы связаны с ВШЭ?
-              </p>
-              <form>
-              <fieldset id="group1">
-              <input name="group1" id="opt1"  type="radio" value="1">
-              <label for="opt1">Учусь тут</label>
-              <br>
-              <input name="group1" id="opt2"  type="radio" value="2">
-              <label for="opt2">Работаю тут</label>
-              <br>
-              <input name="group1" id="opt3" type="radio" value="3">
-              <label for="opt3">Только планирую связать свою судьбу с ВШЭ</label>
-              <br>
-              <input name="group1" id="opt4" type="radio" value="4">
-              <label for="opt4">Никак не связан с ВШЭ и не планирую</label>
-              <br>
-              </fieldset>
-              </form>
-              <br>
-           </li>
-           <li>
-              <p>
-              Какие вопросы вас интересуют?
-              </p>
-              <form>
-              <fieldset id="group2_1">
-              <input name="group2_1_1" id="opt1"  type="radio" value="1">
-              <label for="opt1">Поступление в ВШЭ</label>
-              <br>
-              <input name="group2_1_2" id="opt2"  type="radio" value="2">
-              <label for="opt2">Ситуация с общежитиями для студентов</label>
-              <br>
-              <input name="group2_1_3" id="opt3" type="radio" value="3">
-              <label for="opt3">Подробности по студенческим организациям</label>
-              <br>
-              <input name="group2_1_4" id="opt4" type="radio" value="4">
-              <label for="opt4">Наличие стипендии и возможность ее получения</label>
-              <br>
-              <input type="reset"><br>
-              </fieldset>
-              </form>
-              <br>
-           </li>
-           <li>
-              <p>
-              Распишите ваши вопросы подробно в поле ниже
-              </p>
-              <textarea></textarea><br><br>
-            </li>
-           <li>
-              <p>
-              Прикрепите сюда файл (лучше связанный с темой заявки, но можете просто прикрепить подборку с котиками)
-              </p>
-              <input type="file" name="uplResume"><br><br>
-           </li>
-           <li>
-              <p>
-              Выберете город (в списке представлены те, где есть филиал ВШЭ)
-              </p>
-              <select name="slct">
-                <optgroup label="numbers">
-                  <option>Москва</option>
-                  <option>Санкт-Петербург</option>
-                  <option>Пермь</option>
-                  <option>Нижний Новгород</option>
-                </optgroup>
-              </select> <br><br>
-            </li>
-           <li>
-              <p>
-              Заполните поля ниже, указав дату и время, когда вам удобно будет связаться
-              </p>
-              <input type="time"><br><br>
-              <input type="week"><br><br>
-              <input type="month"><br><br>
-            </li>
-         </ol>
+        <h2>
+        Жизнь студента ВШЭ
+        </h2> 
+        <h3>
+        Учебные будни
+        </h3> <br>
          
-     <input type="checkbox" name="chkAccepted">
-     <label for="chkAccepted">Вы соглашаетесь на обработку персональных данных </label>
-     <br>
-     <input type="submit"><br><br>
-   </section>
-   <p>
-   <i>Это конец формы! Спасибо за ее заполнение, с вами свяжутся в течение одного рабочего дня! Bye!
-   </i>
-   </p>
+        <p>
+        Я - студентка вышки, обучаюсь на направлении <a href="https://www.hse.ru/ba/am/">"Прикладная математика"</a>. В рамках учебной деятельности мы изучаем такие дисциплины, как математический анализ, теория вероятностей, линейная алгебра, а также программирование на различных языках. Мы решаем сложные задачи, используя математические методы и моделирование.
+        </p>
+        <code>
+          let <var>program</var> = "Applied Math";
+        </code> </br>
+        
+        <br> 
+        <h5>
+        Девиз университета
+        </h5>
+        <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Не для школы, а для жизни мы учимся.</p>
+        <footer><cite>Высшая школа экономики</cite></footer>
+        </blockquote>
+        <hr>
+         
+        <p>
+        А вот как звучит девиз вышки на китайском!
+        </p>
+        <ruby> 我们学习不是为了学校，而是为了生活 <rp>(</rp><rt>wǒmen xuéxí bù shì wéi liǎo xuéxiào，érshì wéi liǎo shēnghuó</rt><rp>)</rp> </ruby>
+        <hr>
+
+        <h5>
+        Логотип университета
+        </h5> <br>
+        <input type="image" width="200" height="200" src="https://www.hse.ru/mirror/pubs/share/522215913"><br>
+        
+        <p>
+        <i>Попробуйте сами подобрать <u>цвет</u>, максимально похожий на логотип вышки!</i>
+        </p>
+        <label for="color">Подобрать: </label>
+        <input type="color" id="clr"><br>
+        
+        <br>
+        <p>
+        Я учусь уже на 3 курсе, в прошлом 2 с половиной года обучения, 5 семестров и 10 закрытых сессий.
+        </p>
+        <p>
+        А теперь попробуйте угадать дату, когда я закончу обучение и стану самым настоящий дипломированным специалистом:
+        </p>
+        
+        <p>
+        С датой я, конечно, немного поторопилась, но год указать можно точно: <b>2025</b>
+        </p> <br>
+         
+        <h3>
+        Студенческие активности
+        </h3> <br>
+         
+        <article>
+        <p>
+        В университете постоянно проходят разнообразные активные студенческие мероприятия, которые способствуют развитию и обогащению студенческой жизни. От спортивных соревнований и фестивалей до творческих конкурсов и образовательных семинаров - каждый студент найдет что-то по душе.
+        </p>
+        
+        <figure title="Kitten image">
+           <img width="200" height="150" src="https://sun9-76.userapi.com/impg/c855532/v855532445/2000ee/XovCIoDsDzM.jpg?size=2500x1663&quality=96&sign=be6af6d5b95bc43cc01619a5a8f26a87&type=album" alt="Event">
+           <img width="200" height="150" src="https://sun1-96.userapi.com/impg/c855532/v855532445/200026/ASIosSudbnU.jpg?size=2500x1663&quality=96&sign=5d60fc0bf557c5c7d8183b4c4c51afcc&type=album" alt="Event"><br>
+           <img width="200" height="150" src="https://sun1-14.userapi.com/impg/f5tWxGcGZw6gUxoL-ozs-E-hpTgGt8CzANcaIQ/AQ42ptpHbB4.jpg?size=602x400&quality=95&sign=5fd02c2d6e5add59aa487a96e9a111a1&type=album" alt="Event">
+           <img width="200" height="150" src="https://sun1-95.userapi.com/impg/ZApo8yA7M0jmjWrGoq6AGZ8rfTuxfLmRdkb7Xg/3Ra3MEImF0Q.jpg?size=602x401&quality=95&sign=69977f9f9b3070c2bbb4208cb132d3d6&type=album" alt="Event">
+           <figcaption><em>Фотографии студенческих мероприятий</em></figcaption>
+         </figure>
+         
+         <p>
+         Смотрите видео с одного из последних мероприятий, которое прошло в стенах нашего университета, оно было яркое, запоминающееся и очень душевное!
+         </p>
+         <video width="320" height="240" controls>
+         <source src="movie.mp4" type="video/mp4">
+         <source src="movie.ogg" type="video/ogg">
+         Your browser does not support the video tag.
+         </video>
+         <audio controls autoplay>
+         <source src="horse.ogg" type="audio/ogg">
+         <source src="horse.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+         </audio>
+          
+         <br>
+         <br>
+         <samp>
+         <pre>
+  Такие мероприятия не только помогают студентам 
+развиваться и расти как личности, но и создают атмосферу 
+дружбы, сотрудничества и солидарности. 
+  Активное участие в таких мероприятиях способствует формированию 
+у студентов навыков коммуникации, организации и лидерства, 
+которые будут полезны им в будущей профессиональной деятельности.
+         </pre>
+         </samp>
+        </article>
+        
+         
+         
+       <aside>
+         
+          <br>
+          <h2>
+          Полезная информация
+          </h2>
+         
+          <p>
+          <bdo dir="ltr">
+          Список <mark>полезных</mark> и <strong>интересных</strong> ссылок про ВШЭ
+          </bdo>
+          </p>
+          <ol>
+           <li><a href="https://www.hse.ru/">Официальная страница университета</a></li>
+           <li><a href="https://ba.hse.ru/">Информация по поступлению</a></li>
+           <li><a href="https://www.hse.ru/dormitory/">Общежития</a></li>
+         </ol>
+        </aside>
+         
+     </section>
+  <section>
+       <article>
+        <p>
+          <kbd>
+            Дата создания этой страницы
+            <time datetime="2024-02-10">10 февраля 2024 г.</time>
+          </kbd>
+        </p>
+        
+        <p>
+        Хотите заполнить анкету<sup><a title="Что такое анкета?" href="https://ru.wikipedia.org/wiki/Анкета">[?]</a></sup> с обратной связью? Тогда перейдите по ссылке ниже!<sub><del>В конце вас будет ждать милый котик</del></sub>
+        </p>
+     </section>
 </main>
- <footer id="footer">
+   
+<footer id="footer">
      <p>
-       All rights reserved
+       Все права защищены
      </p>
      <address>
      <p>
-       Москва
+       Москва, 2024
      </p>
      </address>
    </footer>
