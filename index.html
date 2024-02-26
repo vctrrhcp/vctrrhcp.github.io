@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - index</title>
-  
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="ru">
 <head>
  <title>Главная страница "Я - студент ВШЭ"</title>
@@ -29,13 +19,34 @@
  <link rel="shortcut icon" href="../icons/favicon.ico" type="image/x-icon">
  
  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="image.png">
+  
+ <link href="style.css" rel="stylesheet" type="text/css"/>
+  
+ <style>
+  html {
+    background-color: rgb(5, 54, 118);
+  }
+
+  h3, div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  } 
+ </style>
 
 </head>
+  
 <body>
  <header>
    <h1>
     Я - студент ВШЭ
    </h1>
+   
+   <p>
+    <span class="zag" id="z">
+      ВШЭ
+     </span>
+   </p>   
  </header>
   
  <nav>
@@ -43,16 +54,16 @@
      <li>
        <a href="index.html">Жизнь студента ВШЭ</a>
        <ul>
-         <li><a href="#">Учебные будни</a></li>
-         <li><a href="#">Студенческие активности</a></li>
-         <li><a href="#">Полезная информация</a></li>
+         <li><a href="#section1">Учебные будни</a></li>
+         <li><a href="#section2">Студенческие активности</a></li>
+         <li><a href="#section3">Полезная информация</a></li>
        </ul>
      </li>
      <li><a href="form.html">Страница обратной связи</a></li>
    </ul>
  </nav>
   
- <main>
+ <main> 
  <form action="/serverscript" method="post">
  <label for="query">Поиск по сайту: </label>
  <input type="search" disabled name="query" placeholder="Введите запрос">
@@ -64,35 +75,35 @@
         <h2>
         Жизнь студента ВШЭ
         </h2> 
-        <h3>
-        Учебные будни
+        <h3 section1>
+        <span class="bluewords">Учебные будни</span>
         </h3> <br>
          
         <p>
         Я - студентка вышки, обучаюсь на направлении <a href="https://www.hse.ru/ba/am/">"Прикладная математика"</a>. В рамках учебной деятельности мы изучаем такие дисциплины, как математический анализ, теория вероятностей, линейная алгебра, а также программирование на различных языках. Мы решаем сложные задачи, используя математические методы и моделирование.
         </p>
-        <code>
-          let <var>program</var> = "Applied Math";
-        </code> </br>
+          <code>
+            let <var>program</var> = "Applied Math";
+          </code> </br>
         
         <br> 
         <h5>
-        Девиз университета
+        <span class="bluewords">Девиз университета</span>
         </h5>
         <blockquote cite="https://www.huxley.net/bnw/four.html">
-        <p>Не для школы, а для жизни мы учимся.</p>
-        <footer><cite>Высшая школа экономики</cite></footer>
+        <p> <div class="verb">Не для школы, а для жизни мы учимся.</div></p>
+        <footer><cite><span class="term" style="padding: 5px; background-color:grey !important; color: white !important">Высшая школа экономики</span></cite></footer>
         </blockquote>
         <hr>
          
         <p>
         А вот как звучит девиз вышки на китайском!
         </p>
-        <ruby> 我们学习不是为了学校，而是为了生活 <rp>(</rp><rt>wǒmen xuéxí bù shì wéi liǎo xuéxiào，érshì wéi liǎo shēnghuó</rt><rp>)</rp> </ruby>
+        <div class="verb"><ruby>我们学习不是为了学校，而是为了生活 <rp>(</rp><rt>wǒmen xuéxí bù shì wéi liǎo xuéxiào，érshì wéi liǎo shēnghuó</rt><rp>)</rp></ruby></div>
         <hr>
 
         <h5>
-        Логотип университета
+        <span class="bluewords">Логотип университета</span>
         </h5> <br>
         <input type="image" width="200" height="200" src="https://www.hse.ru/mirror/pubs/share/522215913"><br>
         
@@ -104,7 +115,9 @@
         
         <br>
         <p>
+        <span id="t1" style="border: dotted; border-color: pink;">
         Я учусь уже на 3 курсе, в прошлом 2 с половиной года обучения, 5 семестров и 10 закрытых сессий.
+        </span>
         </p>
         <p>
         А теперь попробуйте угадать дату, когда я закончу обучение и стану самым настоящий дипломированным специалистом:
@@ -114,8 +127,8 @@
         С датой я, конечно, немного поторопилась, но год указать можно точно: <b>2025</b>
         </p> <br>
          
-        <h3>
-        Студенческие активности
+        <h3 section2>
+        <span class="bluewords">Студенческие активности</span>
         </h3> <br>
          
         <article>
@@ -149,24 +162,26 @@
          <br>
          <samp>
          <pre>
+         <div class="shadowbox">
   Такие мероприятия не только помогают студентам 
 развиваться и расти как личности, но и создают атмосферу 
 дружбы, сотрудничества и солидарности. 
   Активное участие в таких мероприятиях способствует формированию 
 у студентов навыков коммуникации, организации и лидерства, 
 которые будут полезны им в будущей профессиональной деятельности.
+         </div>
          </pre>
          </samp>
-        </article>
+         </article>
         
          
          
        <aside>
          
           <br>
-          <h2>
-          Полезная информация
-          </h2>
+          <h3 section1>
+          <span class="bluewords">Полезная информация</span>
+          </h3>
          
           <p>
           <bdo dir="ltr">
@@ -206,9 +221,5 @@
      </p>
      </address>
    </footer>
-</body>
-</html>
-<!-- partial -->
-  
 </body>
 </html>
