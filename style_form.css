@@ -1,0 +1,24 @@
+@media only screen and (max-width: 600px){
+     nav, h2 {
+        -webkit-filter: invert(100%);
+        }
+     body{
+          background-color: #f5f5f5;
+        }
+    }
+
+a[href="index.html"] {
+  font-size: 18px;
+  color: #9933ff;
+}
+
+.end {
+  color: red;
+  border: 3px dotted black;
+  position:: fixed;
+}
+
+
+ol {
+  color: rgb(5, 54, 118);
+}
