@@ -33,6 +33,11 @@
     justify-content: space-around;
   } 
  </style>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+integrity= 
+"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" /> 
 
 </head>
   
@@ -209,6 +214,63 @@
         Хотите заполнить анкету<sup><a title="Что такое анкета?" href="https://ru.wikipedia.org/wiki/Анкета">[?]</a></sup> с обратной связью? Тогда перейдите по ссылке ниже!<sub><del>В конце вас будет ждать милый котик</del></sub>
         </p>
      </section>
+    
+    <h2><span class="bluewords">Расположение главного корпуса на интерактивной карте</span></h2> 
+    <div id="map" style="width: 960px; height: 500px"></div> 
+  
+ 
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity= "sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script> 
+    
+    
+    <br>
+    <br>
+    <br>
+    <h2><span class="bluewords">Виртуальный чат</span></h2> 
+    <div class="container">
+        <form class="form" id="form">
+            <input class="input" type="text" placeholder="Имя" id="myname">
+            <input class="input" type="text" placeholder="Сообщение" id="message">
+            <button class="button">Отправить</button>
+        </form>
+        <div class="messageArea" id="messageArea"></div>
+    </div>
+ 
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io();
+ 
+        let form = document.getElementById('form');
+        let myname = document.getElementById('myname');
+        let message = document.getElementById('message');
+        let messageArea = document.getElementById('messageArea');
+ 
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+ 
+            if (message.value) {
+                socket.emit('send name', myname.value);
+                socket.emit('send message', message.value);
+                message.value = '';
+            }
+        });
+ 
+        socket.on('send name', (username) => {
+            let name = document.createElement('p');
+            name.classList.add('message');
+            name.innerHTML = `<span class="username">${username}:</span>`;
+            messageArea.appendChild(name);
+        });
+ 
+        socket.on('send message', (chat) => {
+            let chatContent = document.createElement('p');
+            chatContent.classList.add('message');
+            chatContent.textContent = chat;
+            messageArea.appendChild(chatContent);
+        });
+    </script>
+    
 </main>
    
 <footer id="footer">
