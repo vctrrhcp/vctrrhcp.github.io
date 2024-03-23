@@ -20,7 +20,8 @@
  
  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="image.png">
  
- <link href="style_form.css" rel="stylesheet" type="text/css"/>
+   <link href="style_form.css" rel="stylesheet" type="text/css"/>
+  <script src="file.js"></script>
   
  <style>
   html {
@@ -78,6 +79,7 @@
         </p>
         <input type="button" value="Тестовая кнопка для проверки готовности к заполнению формы, нажмите"><br><br>
         <ol>
+        <form action="/submit" method="post">
            <li>
               <p>
               Введите вашу почту
@@ -128,7 +130,7 @@
               <br>
               </fieldset>
               </form>
-              <br>++
+              <br>
            </li>
            <li>
               <p>
@@ -186,6 +188,7 @@
               <input type="week"><br><br>
               <input type="month"><br><br>
             </li>
+         </form>
          </ol>
          
      <input type="checkbox" name="chkAccepted">
